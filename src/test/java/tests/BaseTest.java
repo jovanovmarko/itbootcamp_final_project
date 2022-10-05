@@ -8,10 +8,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
-import pages.HomePage;
-import pages.LoginPage;
-import pages.SingUpPage;
-import pages.WelcomePage;
+import pages.*;
 
 import java.time.Duration;
 
@@ -31,6 +28,10 @@ public abstract class BaseTest {
 
     protected SingUpPage singUpPage;
 
+    protected CitiesPage citiesPage;
+
+    protected ProfilePage profilePage;
+
     protected Faker faker;
 
     @BeforeClass
@@ -43,6 +44,8 @@ public abstract class BaseTest {
         homePage = new HomePage(driver,driverWait);
         welcomePage = new WelcomePage(driver,driverWait);
         singUpPage = new SingUpPage(driver,driverWait);
+        citiesPage = new CitiesPage(driver,driverWait);
+        profilePage = new ProfilePage(driver,driverWait);
         faker = new Faker();
         driver.manage().window().maximize();
         driver.manage().deleteAllCookies();
