@@ -4,14 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a282f23b-2fb8-4365-8ef8-306048dc56bf" name="Changes" comment="second day commit">
+    <list default="true" id="a282f23b-2fb8-4365-8ef8-306048dc56bf" name="Changes" comment="added comments and rename tests">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/tests/AdminCitiesTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/AdminCitiesTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/AuthRoutesTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/AuthRoutesTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/EditProfileTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/EditProfileTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/LocaleTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/LocaleTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/LoginTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/LoginTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/SingUpTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/SingUpTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,8 +40,8 @@
     &quot;last_opened_file_path&quot;: &quot;C:/Users/Marko/IdeaProjects/itbootcamp_final_project&quot;
   }
 }</component>
-  <component name="RunManager" selected="TestNG.LoginTest.loginTest6">
-    <configuration name="AdminCitiesTest.test1" type="TestNG" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="TestNG.AdminCitiesTest.deleteCityTest">
+    <configuration name="AdminCitiesTest.createNewCityTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="itbootcamp_final_project" />
       <extension name="coverage">
         <pattern>
@@ -56,7 +51,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="tests" />
       <option name="MAIN_CLASS_NAME" value="tests.AdminCitiesTest" />
-      <option name="METHOD_NAME" value="test1" />
+      <option name="METHOD_NAME" value="createNewCityTest" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -64,7 +59,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="EditProfileTest.test1" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="AdminCitiesTest.deleteCityTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="itbootcamp_final_project" />
       <extension name="coverage">
         <pattern>
@@ -73,8 +68,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.EditProfileTest" />
-      <option name="METHOD_NAME" value="test1" />
+      <option name="MAIN_CLASS_NAME" value="tests.AdminCitiesTest" />
+      <option name="METHOD_NAME" value="deleteCityTest" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -82,7 +77,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LocaleTest.test2" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="AdminCitiesTest.editCityTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="itbootcamp_final_project" />
       <extension name="coverage">
         <pattern>
@@ -91,8 +86,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.LocaleTest" />
-      <option name="METHOD_NAME" value="test2" />
+      <option name="MAIN_CLASS_NAME" value="tests.AdminCitiesTest" />
+      <option name="METHOD_NAME" value="editCityTest" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -100,7 +95,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LocaleTest.test3" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="AdminCitiesTest.searchCityTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="itbootcamp_final_project" />
       <extension name="coverage">
         <pattern>
@@ -109,8 +104,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.LocaleTest" />
-      <option name="METHOD_NAME" value="test3" />
+      <option name="MAIN_CLASS_NAME" value="tests.AdminCitiesTest" />
+      <option name="METHOD_NAME" value="searchCityTest" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -118,7 +113,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LoginTest.loginTest6" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="AdminCitiesTest.urlCityTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="itbootcamp_final_project" />
       <extension name="coverage">
         <pattern>
@@ -127,8 +122,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.LoginTest" />
-      <option name="METHOD_NAME" value="loginTest6" />
+      <option name="MAIN_CLASS_NAME" value="tests.AdminCitiesTest" />
+      <option name="METHOD_NAME" value="urlCityTest" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -138,11 +133,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.LoginTest.loginTest6" />
-        <item itemvalue="TestNG.AdminCitiesTest.test1" />
-        <item itemvalue="TestNG.EditProfileTest.test1" />
-        <item itemvalue="TestNG.LocaleTest.test3" />
-        <item itemvalue="TestNG.LocaleTest.test2" />
+        <item itemvalue="TestNG.AdminCitiesTest.deleteCityTest" />
+        <item itemvalue="TestNG.AdminCitiesTest.searchCityTest" />
+        <item itemvalue="TestNG.AdminCitiesTest.editCityTest" />
+        <item itemvalue="TestNG.AdminCitiesTest.createNewCityTest" />
+        <item itemvalue="TestNG.AdminCitiesTest.urlCityTest" />
       </list>
     </recent_temporary>
   </component>
@@ -190,7 +185,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664979469669</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="added comments and rename tests">
+      <created>1665076433323</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1665076433323</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -209,6 +211,7 @@
     <MESSAGE value="added basetest class" />
     <MESSAGE value="first day commit" />
     <MESSAGE value="second day commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="second day commit" />
+    <MESSAGE value="added comments and rename tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="added comments and rename tests" />
   </component>
 </project>

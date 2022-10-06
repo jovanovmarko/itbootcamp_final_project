@@ -32,7 +32,7 @@ public class AdminCitiesTest extends BaseTest{
         welcomePage.clickAdminButton();
         welcomePage.citiesButtonWaiter();
         welcomePage.clickCitiesButton();
-        citiesPage.newCityCreate(faker.country().capital());
+        citiesPage.newCityCreate("MJCity");
         citiesPage.getSaveSuccessfullyMsgWaiter();
         String actualResult = citiesPage.getSaveSuccessfullyMsg().getText();
         Assert.assertTrue(actualResult.contains(expectedResult));
@@ -58,12 +58,17 @@ public class AdminCitiesTest extends BaseTest{
     @Test
     public void searchCityTest() {
         homePage.clickLoginButton();
-        String expectedResult = "Ashgabat";
+        String expectedResult = "MJCity";
         loginPage.login("admin@admin.com", "12345");
         welcomePage.clickAdminButton();
         welcomePage.citiesButtonWaiter();
         welcomePage.clickCitiesButton();
-        citiesPage.searchCity("Ashgabat");
+        citiesPage.searchCity("MJCity");
+        try {
+            Thread.sleep(5000);
+        }catch (InterruptedException e){
+
+        }
         citiesPage.getSearchedCityNameWaiter();
         String actualResult = citiesPage.getSearchedCityName().getText();
         Assert.assertTrue(actualResult.contains(expectedResult));
@@ -73,13 +78,13 @@ public class AdminCitiesTest extends BaseTest{
     @Test
     public void deleteCityTest() {
         homePage.clickLoginButton();
-        String expectedResult = "Ashgabat";
+        String expectedResult = "MJCity";
         String expectedResultMsg = "Deleted successfully";
         loginPage.login("admin@admin.com", "12345");
         welcomePage.clickAdminButton();
         welcomePage.citiesButtonWaiter();
         welcomePage.clickCitiesButton();
-        citiesPage.searchCity("Ashgabat");
+        citiesPage.searchCity("MJCity");
         try {
             Thread.sleep(5000);
         }catch (InterruptedException e){
