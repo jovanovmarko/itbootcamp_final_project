@@ -8,8 +8,9 @@ import org.testng.annotations.Test;
 
 public class AdminCitiesTest extends BaseTest{
 
+    //Verify that current url contains /admins/cities
     @Test
-    public void test1() {
+    public void urlCityTest() {
         String expectedResultUrl = "https://vue-demo.daniel-avellaneda.com/admin/cities";
         homePage.clickLoginButton();
         loginPage.login("admin@admin.com", "12345");
@@ -22,8 +23,9 @@ public class AdminCitiesTest extends BaseTest{
         Assert.assertTrue(welcomePage.getLogOutButtonWp().isDisplayed());
     }
 
+    //Verify that user can successfully create new city
     @Test
-    public void test2() {
+    public void createNewCityTest() {
         homePage.clickLoginButton();
         String expectedResult = "Saved successfully";
         loginPage.login("admin@admin.com", "12345");
@@ -37,8 +39,9 @@ public class AdminCitiesTest extends BaseTest{
 
     }
 
+    //Verify that user can successfully can edit previously created city
     @Test
-    public void test3() {
+    public void editCityTest() {
         homePage.clickLoginButton();
         String expectedResult = "Saved successfully";
         loginPage.login("admin@admin.com", "12345");
@@ -51,8 +54,9 @@ public class AdminCitiesTest extends BaseTest{
         Assert.assertTrue(actualResult.contains(expectedResult));
     }
 
+    //Verify that searched city is displayed in table below
     @Test
-    public void test4() {
+    public void searchCityTest() {
         homePage.clickLoginButton();
         String expectedResult = "Ashgabat";
         loginPage.login("admin@admin.com", "12345");
@@ -65,8 +69,9 @@ public class AdminCitiesTest extends BaseTest{
         Assert.assertTrue(actualResult.contains(expectedResult));
     }
 
+    //Verify that user can successfully delete previously created city
     @Test
-    public void test5() {
+    public void deleteCityTest() {
         homePage.clickLoginButton();
         String expectedResult = "Ashgabat";
         String expectedResultMsg = "Deleted successfully";

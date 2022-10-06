@@ -5,8 +5,10 @@ import org.testng.annotations.Test;
 
 public class EditProfileTest extends BaseTest{
 
+    //Verify that displayed message contains "Profile saved successfully"
+    //Verify that input fields have right value
     @Test
-    public void test1(){
+    public void editProfileTest(){
         String expectedResultMessage = "Profile saved successfuly";
         String expectedResultPhone = "tel";
         String expectedResultCity = "text";

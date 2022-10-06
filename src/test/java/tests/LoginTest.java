@@ -17,8 +17,9 @@ import java.time.Duration;
 public class LoginTest extends BaseTest {
 
 
+    //Verify that url contains /login
     @Test
-    public void loginTest1() {
+    public void urlLoginTest() {
         String expectedResult = "https://vue-demo.daniel-avellaneda.com/login";
         homePage.getDriverWait().until(ExpectedConditions.visibilityOf(homePage.getLoginButtonHp()));
         homePage.clickLoginButton();
@@ -26,8 +27,9 @@ public class LoginTest extends BaseTest {
         Assert.assertEquals(actualResult, expectedResult);
     }
 
+    //Verify that input fields have valid values
     @Test
-    public void loginTest2() {
+    public void checkInputValueTest() {
         String expectedResultEmail = "email";
         String expectedResultPassword = "password";
         homePage.clickLoginButton();
@@ -37,8 +39,9 @@ public class LoginTest extends BaseTest {
         Assert.assertEquals(expectedResultPassword, actualResultPassword);
     }
 
+    //Verify that error message "User does not exist" is displayed
     @Test
-    public void loginTest3() {
+    public void errorUserMessage() {
         String expectedResultMessage = "User does not exists";
         homePage.clickLoginButton();
         String expectedResultUrl = "https://vue-demo.daniel-avellaneda.com/login";
@@ -50,8 +53,9 @@ public class LoginTest extends BaseTest {
         Assert.assertEquals(expectedResultUrl, actualResultUrl);
     }
 
+    //Verify that error message "Wrong password" is displayed
     @Test
-    public void loginTest4() {
+    public void errorMessagePassword() {
         String expectedResultMessage = "Wrong password";
         homePage.clickLoginButton();
         String expectedResultUrl = "https://vue-demo.daniel-avellaneda.com/login";
@@ -62,8 +66,9 @@ public class LoginTest extends BaseTest {
         Assert.assertEquals(expectedResultUrl, actualResultUrl);
     }
 
+    //Verify that user can successfully login and that url contains /home
     @Test
-    public void loginTest5() {
+    public void loginTest() {
         homePage.clickLoginButton();
         String expectedResultUrl = "https://vue-demo.daniel-avellaneda.com/home";
         loginPage.login("admin@admin.com", "12345");
@@ -72,8 +77,9 @@ public class LoginTest extends BaseTest {
         Assert.assertEquals(actualResultUrl, expectedResultUrl);
     }
 
+    //Verify that user can successfully logout and that url contains /login
     @Test
-    public void loginTest6() {
+    public void logoutTest() {
         homePage.clickLoginButton();
         String expectedResultUrl = "https://vue-demo.daniel-avellaneda.com/login";
         loginPage.login("admin@admin.com", "12345");

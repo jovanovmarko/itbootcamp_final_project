@@ -6,8 +6,9 @@ import org.testng.annotations.Test;
 
 public class SingUpTest extends BaseTest {
 
+    //Verify that url contains /signup
     @Test
-    public void singUpTest1() {
+    public void urlSignUpTest() {
         String expectedResultUrl = "https://vue-demo.daniel-avellaneda.com/signup";
         homePage.clickSingUpButton();
         getDriverWait().until(ExpectedConditions.urlContains("/signup"));
@@ -15,8 +16,9 @@ public class SingUpTest extends BaseTest {
         Assert.assertEquals(expectedResultUrl,actualResultUrl);
     }
 
+    //Verify that input fields have valid values
     @Test
-    public void singUpTest2() {
+    public void checkInputTypesTest() {
         homePage.clickSingUpButton();
         String actualResultEmail = singUpPage.getEmailField().getAttribute("type");
         String actualResultPassword = singUpPage.getPasswordField().getAttribute("type");
@@ -30,8 +32,9 @@ public class SingUpTest extends BaseTest {
 
     }
 
+    //Verify that error message is displayed "E-mail already exist"
     @Test
-    public void singUpTest3() {
+    public void displayErrorSignUp() {
         homePage.clickSingUpButton();
         String expectedResult = "E-mail already exists";
         singUpPage.signup("test test","admin@admin.com","123654","123654");
@@ -39,8 +42,9 @@ public class SingUpTest extends BaseTest {
         Assert.assertTrue(actualResult.contains(expectedResult));
     }
 
+    //Verify that user can successfully sing up with valid credentials
     @Test
-    public void singUpTest4() {
+    public void singUpTest() {
         homePage.clickSingUpButton();
         String expectedResult = "IMPORTANT: Verify your account";
         singUpPage.signup("John Doe", "john.doe99@itbootcamp.rs","123456","123456");

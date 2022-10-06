@@ -5,8 +5,9 @@ import org.testng.annotations.Test;
 
 public class LocaleTest extends BaseTest {
 
+    //Verify that header language is changed
     @Test
-    public void test1() {
+    public void setLocaleToEsTest() {
         String expectedResult = "Página de aterrizaje";
         homePage.clickLanguageButton();
         homePage.clickEsLanguageButtonWaiter();
@@ -16,8 +17,9 @@ public class LocaleTest extends BaseTest {
         Assert.assertEquals(actualResult, expectedResult);
     }
 
+    //Verify that header language is changed
     @Test
-    public void test2() {
+    public void setLocaleToEnTest() {
         String expectedResult = "Landing";
         homePage.clickLanguageButton();
         homePage.clickEnLanguageButtonWaiter();
@@ -27,8 +29,9 @@ public class LocaleTest extends BaseTest {
         Assert.assertEquals(actualResult, expectedResult);
     }
 
+    //Verify that header language is changed
     @Test
-    public void test3() {
+    public void setLocaleToFrTest() {
         String expectedResult = "Page d'atterrissage";
         homePage.clickLanguageButton();
         homePage.clickFrLanguageButtonWaiter();
