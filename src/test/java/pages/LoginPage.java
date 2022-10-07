@@ -39,19 +39,19 @@ public class LoginPage extends BasePage {
         return getDriver().findElement(errorMessage);
     }
 
-    public void login (String email, String passowrd){
+    public void login(String email, String password) {
         getEmailField().clear();
         getPasswordField().clear();
         getEmailField().sendKeys(email);
-        getPasswordField().sendKeys(passowrd);
+        getPasswordField().sendKeys(password);
         getLoginButton().click();
     }
 
-    public void waitPresence () {
+    public void waitPresence() {
         getDriverWait().until(ExpectedConditions.presenceOfElementLocated(loginButton));
     }
 
-    public void waitPresenceErrorMessage () {
+    public void waitPresenceErrorMessage() {
         getDriverWait().until(ExpectedConditions.presenceOfElementLocated(errorMessage));
     }
 }

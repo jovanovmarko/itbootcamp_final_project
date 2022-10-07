@@ -38,7 +38,7 @@ public class LocaleTest extends BaseTest {
         homePage.clickFrLanguageButton();
         homePage.headerTextWaiter();
         String actualResult = homePage.getHeaderText().getText();
-        Assert.assertEquals(actualResult,expectedResult);
+        Assert.assertEquals(actualResult, expectedResult);
     }
 
 

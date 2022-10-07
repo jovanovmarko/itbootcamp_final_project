@@ -36,16 +36,16 @@ public abstract class BaseTest {
 
     @BeforeClass
     public void setup() {
-        System.setProperty("webdriver.chrome.driver","chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
         driver = new ChromeDriver();
         driverWait = new WebDriverWait(driver, Duration.ofSeconds(10));
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
-        loginPage = new LoginPage(driver,driverWait);
-        homePage = new HomePage(driver,driverWait);
-        welcomePage = new WelcomePage(driver,driverWait);
-        singUpPage = new SingUpPage(driver,driverWait);
-        citiesPage = new CitiesPage(driver,driverWait);
-        profilePage = new ProfilePage(driver,driverWait);
+        loginPage = new LoginPage(driver, driverWait);
+        homePage = new HomePage(driver, driverWait);
+        welcomePage = new WelcomePage(driver, driverWait);
+        singUpPage = new SingUpPage(driver, driverWait);
+        citiesPage = new CitiesPage(driver, driverWait);
+        profilePage = new ProfilePage(driver, driverWait);
         faker = new Faker();
         driver.manage().window().maximize();
         driver.manage().deleteAllCookies();

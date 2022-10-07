@@ -13,7 +13,7 @@ public class SingUpTest extends BaseTest {
         homePage.clickSingUpButton();
         getDriverWait().until(ExpectedConditions.urlContains("/signup"));
         String actualResultUrl = getDriver().getCurrentUrl();
-        Assert.assertEquals(expectedResultUrl,actualResultUrl);
+        Assert.assertEquals(expectedResultUrl, actualResultUrl);
     }
 
     //Verify that input fields have valid values
@@ -26,9 +26,9 @@ public class SingUpTest extends BaseTest {
         String expectedResultEmail = "email";
         String expectedResultPassword = "password";
         String expectedResultConfirmPassword = "password";
-        Assert.assertEquals(actualResultEmail,expectedResultEmail);
-        Assert.assertEquals(actualResultPassword,expectedResultPassword);
-        Assert.assertEquals(actualResultConfirmPassword,expectedResultConfirmPassword);
+        Assert.assertEquals(actualResultEmail, expectedResultEmail);
+        Assert.assertEquals(actualResultPassword, expectedResultPassword);
+        Assert.assertEquals(actualResultConfirmPassword, expectedResultConfirmPassword);
 
     }
 
@@ -37,8 +37,8 @@ public class SingUpTest extends BaseTest {
     public void displayErrorSignUp() {
         homePage.clickSingUpButton();
         String expectedResult = "E-mail already exists";
-        singUpPage.signup("test test","admin@admin.com","123654","123654");
-        String actualResult = singUpPage.getemailAlreadyExistMessage().getText();
+        singUpPage.signup("test test", "admin@admin.com", "123654", "123654");
+        String actualResult = singUpPage.getEmailAlreadyExistMessage().getText();
         Assert.assertTrue(actualResult.contains(expectedResult));
     }
 
@@ -47,18 +47,14 @@ public class SingUpTest extends BaseTest {
     public void singUpTest() {
         homePage.clickSingUpButton();
         String expectedResult = "IMPORTANT: Verify your account";
-        singUpPage.signup("John Doe", "john.doe99@itbootcamp.rs","123456","123456");
+        singUpPage.signup("John Doe", "john.doe99@itbootcamp.rs", "123456", "123456");
         try {
             Thread.sleep(1000);
-        }catch (InterruptedException e){
+        } catch (InterruptedException e) {
         }
         String actualResult = welcomePage.getVerifyAccMsg().getText();
         Assert.assertTrue(actualResult.contains(expectedResult));
     }
-
-
-
-
 
 
 }

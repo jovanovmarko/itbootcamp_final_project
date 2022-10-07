@@ -28,7 +28,6 @@ public class ProfilePage extends BasePage {
     private By message = By.xpath("//*[@id=\"app\"]/div[1]/main/div/div[2]/div/div/div[4]/div/div/div/div/div[1]");
 
 
-
     public ProfilePage(WebDriver driver, WebDriverWait driverWait) {
         super(driver, driverWait);
     }
@@ -71,47 +70,44 @@ public class ProfilePage extends BasePage {
     }
 
 
-    public void editProfile(String phone, String country, String twitterUrl, String gitHubUrl){
+    public void editProfile(String phone, String country, String twitterUrl, String gitHubUrl) {
         try {
             Thread.sleep(1000);
-        }catch (InterruptedException e){
+        } catch (InterruptedException e) {
         }
         getPhoneField().sendKeys(phone);
         try {
             Thread.sleep(500);
-        }catch (InterruptedException e){
+        } catch (InterruptedException e) {
         }
         getCityField().click();
         try {
             Thread.sleep(500);
-        }catch (InterruptedException e){
+        } catch (InterruptedException e) {
 
         }
         getNewCity().click();
         try {
             Thread.sleep(500);
-        }catch (InterruptedException e){
+        } catch (InterruptedException e) {
         }
         getCountry().sendKeys(country);
         try {
             Thread.sleep(500);
-        }catch (InterruptedException e){
+        } catch (InterruptedException e) {
         }
         getTwitterUrl().sendKeys(twitterUrl);
         try {
             Thread.sleep(500);
-        }catch (InterruptedException e){
+        } catch (InterruptedException e) {
         }
         getGitHubUrl().sendKeys(gitHubUrl);
         try {
             Thread.sleep(500);
-        }catch (InterruptedException e){
+        } catch (InterruptedException e) {
         }
         getSaveButton().click();
     }
-
-
-
 
 
 }

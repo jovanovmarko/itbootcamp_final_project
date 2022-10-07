@@ -45,11 +45,11 @@ public class SingUpPage extends BasePage {
         return getDriver().findElement(singMeUpButton);
     }
 
-    public WebElement getemailAlreadyExistMessage() {
+    public WebElement getEmailAlreadyExistMessage() {
         return getDriver().findElement(emailAlreadyExistMessage);
     }
 
-    public void signup (String name, String email, String password, String confirmPassword){
+    public void signup(String name, String email, String password, String confirmPassword) {
         getNameField().clear();
         getEmailField().clear();
         getPasswordField().clear();
@@ -62,7 +62,7 @@ public class SingUpPage extends BasePage {
 
     }
 
-    public void singUpWaiter (){
+    public void singUpWaiter() {
         getDriverWait().until(ExpectedConditions.presenceOfElementLocated(nameField));
     }
 }

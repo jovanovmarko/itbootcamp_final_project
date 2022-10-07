@@ -69,7 +69,7 @@ public class WelcomePage extends BasePage {
         getProfileButton().click();
     }
 
-    public void clickCloseModalButton(){
+    public void clickCloseModalButton() {
         getCloseModalButton().click();
     }
 

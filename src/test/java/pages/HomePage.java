@@ -6,7 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class HomePage extends BasePage  {
+public class HomePage extends BasePage {
 
     private By loginButtonHp = By.xpath("//*[@id=\"app\"]/div[1]/div/header/div/div[3]/a[3]");
 
@@ -22,9 +22,6 @@ public class HomePage extends BasePage  {
 
 
     private By headerText = By.xpath("//*[@id=\"app\"]/div[1]/main/div/div[2]/div/div[1]/div[1]/h1");
-
-
-
 
 
     public HomePage(WebDriver driver, WebDriverWait driverWait) {
@@ -75,11 +72,11 @@ public class HomePage extends BasePage  {
         getEsLanguageButton().click();
     }
 
-    public void clickEnLanguageButton(){
+    public void clickEnLanguageButton() {
         getEnLanguageButton().click();
     }
 
-    public void clickFrLanguageButton(){
+    public void clickFrLanguageButton() {
         getFrLanguageButton().click();
     }
 
@@ -96,7 +93,7 @@ public class HomePage extends BasePage  {
         getDriverWait().until(ExpectedConditions.presenceOfElementLocated(frLanguageButton));
     }
 
-    public void headerTextWaiter(){
+    public void headerTextWaiter() {
         getDriverWait().until(ExpectedConditions.presenceOfElementLocated(headerText));
     }
 }

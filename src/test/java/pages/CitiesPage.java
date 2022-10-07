@@ -75,23 +75,23 @@ public class CitiesPage extends BasePage {
         return getDriver().findElement(deleteMessage);
     }
 
-    public void newCityCreate(String cityName){
+    public void newCityCreate(String cityName) {
         getNewItemButton().click();
         getCityName().sendKeys(cityName);
         getSaveButton().click();
     }
 
-    public void editCity(String editedCityName){
+    public void editCity(String editedCityName) {
         getEditButton().click();
         getCityName().sendKeys(editedCityName);
         getSaveButton().click();
     }
 
-    public void searchCity(String cityName){
+    public void searchCity(String cityName) {
         getSearch().sendKeys(cityName);
     }
 
-    public void deleteCity(){
+    public void deleteCity() {
         getDeleteButton().click();
         getModalDeleteButton().click();
     }
@@ -104,7 +104,7 @@ public class CitiesPage extends BasePage {
         getDriverWait().until(ExpectedConditions.presenceOfElementLocated(searchedCityName));
     }
 
-    public void getDeleteMessageWaiter () {
+    public void getDeleteMessageWaiter() {
         getDriverWait().until(ExpectedConditions.presenceOfElementLocated(deleteMessage));
     }
 }

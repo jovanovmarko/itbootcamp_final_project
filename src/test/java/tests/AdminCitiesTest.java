@@ -6,7 +6,7 @@ import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class AdminCitiesTest extends BaseTest{
+public class AdminCitiesTest extends BaseTest {
 
     //Verify that current url contains /admins/cities
     @Test
@@ -19,7 +19,7 @@ public class AdminCitiesTest extends BaseTest{
         welcomePage.clickCitiesButton();
         getDriverWait().until(ExpectedConditions.urlContains("/admin/cities"));
         String actualResultUrl = welcomePage.getDriver().getCurrentUrl();
-        Assert.assertEquals(expectedResultUrl,actualResultUrl);
+        Assert.assertEquals(expectedResultUrl, actualResultUrl);
         Assert.assertTrue(welcomePage.getLogOutButtonWp().isDisplayed());
     }
 
@@ -66,7 +66,7 @@ public class AdminCitiesTest extends BaseTest{
         citiesPage.searchCity("MJCity");
         try {
             Thread.sleep(5000);
-        }catch (InterruptedException e){
+        } catch (InterruptedException e) {
 
         }
         citiesPage.getSearchedCityNameWaiter();
@@ -87,7 +87,7 @@ public class AdminCitiesTest extends BaseTest{
         citiesPage.searchCity("MJCity");
         try {
             Thread.sleep(5000);
-        }catch (InterruptedException e){
+        } catch (InterruptedException e) {
         }
         citiesPage.getSearchedCityNameWaiter();
         String actualResult = citiesPage.getSearchedCityName().getText();
@@ -95,7 +95,7 @@ public class AdminCitiesTest extends BaseTest{
         citiesPage.deleteCity();
         try {
             Thread.sleep(5000);
-        }catch (InterruptedException e){
+        } catch (InterruptedException e) {
         }
         String actualResultMsg = citiesPage.getDeleteMessage().getText();
         Assert.assertTrue(actualResultMsg.contains(expectedResultMsg));
