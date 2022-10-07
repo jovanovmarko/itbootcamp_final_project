@@ -62,35 +62,13 @@ public abstract class BaseTest {
         driver.get(baseUrl);
     }
 
-    public String getBaseUrl() {
-        return baseUrl;
-    }
-
-    public void setBaseUrl(String baseUrl) {
-        this.baseUrl = baseUrl;
-    }
-
     public WebDriver getDriver() {
         return driver;
-    }
-
-    public void setDriver(WebDriver driver) {
-        this.driver = driver;
     }
 
     public WebDriverWait getDriverWait() {
         return driverWait;
     }
 
-    public void setDriverWait(WebDriverWait driverWait) {
-        this.driverWait = driverWait;
-    }
 
-    public LoginPage getLoginPage() {
-        return loginPage;
-    }
-
-    public void setLoginPage(LoginPage loginPage) {
-        this.loginPage = loginPage;
-    }
 }

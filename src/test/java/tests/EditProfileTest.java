@@ -9,7 +9,7 @@ public class EditProfileTest extends BaseTest {
     //Verify that input fields have right value
     @Test
     public void editProfileTest() {
-        String expectedResultMessage = "Profile saved successfully";
+        String expectedResultMessage = "Profile saved successfuly";
         String expectedResultPhone = "tel";
         String expectedResultCity = "text";
         String expectedResultCountry = "text";
@@ -23,6 +23,7 @@ public class EditProfileTest extends BaseTest {
         welcomePage.clickProfileButton();
         profilePage.editProfile(faker.phoneNumber().cellPhone(), faker.country().name(), "https://" + faker.internet().url(), "https://" + faker.internet().url());
         String actualResultMessage = profilePage.getMessage().getText();
+        System.out.println(actualResultMessage);
         Assert.assertTrue(actualResultMessage.contains(expectedResultMessage));
         String actualResultPhone = profilePage.getPhoneField().getAttribute("type");
         String actualResultCity = profilePage.getCityField().getAttribute("type");
@@ -34,5 +35,6 @@ public class EditProfileTest extends BaseTest {
         Assert.assertEquals(actualResultCountry, expectedResultCountry);
         Assert.assertEquals(actualResultTwitterUrl, expectedResultTwitterUrl);
         Assert.assertEquals(actualResultGitHubUrl, expectedResultGitHubUrl);
+
     }
 }
