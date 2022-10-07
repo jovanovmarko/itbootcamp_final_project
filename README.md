@@ -1,5 +1,5 @@
 # ITbootcamp final project
-This repository contains final project that was done on the QA IT-Bootcamp course. The project contains automation tests for the [vue-demo.daniel-avellaneda](https://vue-demo.daniel-avellaneda.com/) 
+This repository contains final project that was done on the QA IT-Bootcamp course. The project contains automation tests for the https://vue-demo.daniel-avellaneda.com/
 
 ## Tools
 1. Selenium WebDriver
